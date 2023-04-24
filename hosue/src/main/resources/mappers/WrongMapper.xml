@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wangyue.mapper.WrongMapper">
+    <!--    <resultMap id="BaseResultMap" type="Wrong">-->
+    <!--        <id column="id" property="id" jdbcType="INTEGER"/>-->
+    <!--        <result column="house_id" property="house_id" jdbcType="VARCHAR"/>-->
+    <!--        <result column="address" property="address" jdbcType="VARCHAR"/>-->
+
+    <!--        <result column="date" property="date" jdbcType="DATE"/>-->
+    <!--        <result column="detail" property="detail" jdbcType="VARCHAR"/>-->
+    <!--        <result column="name" property="name" jdbcType="VARCHAR"/>-->
+    <!--        <result column="user_id" property="user_id" jdbcType="INTEGER"/>-->
+    <!--        <result column="status" property="status" jdbcType="VARCHAR"/>-->
+    <!--    </resultMap>-->
+    <select id="findAll" resultType="Wrong">
+        select *
+        from wrong
+        <if test="user_id!=''">
+            where user_id = #{user_id}
+        </if>
+    </select>
+    <select id="findWrongByid" resultType="Wrong">
+        select *
+        from wrong
+        where id = #{id}
+    </select>
+    <insert id="addWrong" parameterType="Wrong">
+        insert into wrong(house_id, address, date, detail, name, user_id, status)
+        values (#{house_id}, #{address}, #{date}, #{detail}, #{name}, #{user_id}, #{status})
+    </insert>
+    <delete id="delWrong" parameterType="Wrong">
+        delete
+        from wrong
+        where id = #{id}
+    </delete>
+</mapper>
