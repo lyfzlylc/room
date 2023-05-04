@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wangyue.mapper.CheckoutMapper">
+    <resultMap id="checkoutResultMap" type="Checkout">
+        <id column="cid" property="id" jdbcType="INTEGER"/>
+        <result column="house_id" property="house_id"/>
+        <result column="address" property="address"/>
+        <result column="status" property="status"/>
+        <result column="user_id" property="user_id"/>
+        <collection property="userlist" ofType="Userlist">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="idcard" column="idcard"/>
+            <result property="phone" column="phone"/>
+            <result property="user_id" column="user_id"/>
+            <result column="nickname" property="nickname"/>
+        </collection>
+    </resultMap>
+    <insert id="addCheckout" parameterType="Checkout">
+        INSERT INTO checkout (house_id, address, status, user_id)
+        VALUES (#{house_id}, #{address}, #{status}, #{user_id})
+    </insert>
+    <delete id="deleteCheckout" parameterType="Checkout">
+        delete from checkout where house_id in
+        <foreach collection="list" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="findAll" resultMap="checkoutResultMap">
+        SELECT c.*,
+        u.*
+        FROM checkout as c
+        LEFT JOIN userlist as u ON u.user_id = c.user_id
+        <where>
+            <if test="username != ''">
+                u.name = #{username}
+            </if>
+            <if test="search!=''">
+                and c.address like "%"#{search}"%"
+            </if>
+        </where>
+
+    </select>
+</mapper>
