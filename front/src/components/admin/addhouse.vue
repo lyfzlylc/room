@@ -106,7 +106,7 @@ const submitForm = async (form) => {
   // ajax 请求接口
   post("/api/addhouse", form)
     .then((resp) => {
-      if (resp === 200) {
+      if (resp.code === 200) {
         ElMessage.success(`添加成功^v^`);
       } else {
         ElMessage.error(`添加失败`);
