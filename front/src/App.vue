@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <Login/>
 </template>
 <style>
 * {
@@ -7,3 +7,6 @@
   padding: 0;
 }
 </style>
+<script setup>
+import Login from "@/components/login/Login.vue";
+</script>

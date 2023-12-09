@@ -6,7 +6,6 @@ import com.wangyue.domain.Schedule;
 import com.wangyue.domain.util.Result;
 import com.wangyue.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -44,7 +43,7 @@ public class ScheduleController {
 
     /**
      *  删除  日程
-     * @param id
+     * @param
      * @return
      */
     @RequestMapping("/delSchedule")

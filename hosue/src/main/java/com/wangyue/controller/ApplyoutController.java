@@ -2,7 +2,10 @@ package com.wangyue.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.wangyue.domain.*;
+import com.wangyue.domain.Applyout;
+import com.wangyue.domain.Checkout;
+import com.wangyue.domain.Houselist;
+import com.wangyue.domain.Zulist;
 import com.wangyue.domain.util.Result;
 import com.wangyue.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -40,8 +42,8 @@ public class ApplyoutController {
     /**
      * 管理员同意退租申请
      *
-     * @param model
-     * @param id
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/agreeapplyout")
@@ -72,8 +74,8 @@ public class ApplyoutController {
     /**
      * 申请退租信息
      *
-     * @param house_id
-     * @param model
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/addApplyout")
@@ -96,7 +98,7 @@ public class ApplyoutController {
 
     /**
      * 拒绝退租
-     * @param house_id
+     * @param
      * @return
      */
     @RequestMapping("/jujueApplyout")
@@ -111,7 +113,7 @@ public class ApplyoutController {
     /**
      * 删除 退租列表
      *
-     * @param house_id
+     * @param
      * @return
      */
     @RequestMapping("/delapplyout")

@@ -6,13 +6,14 @@ import com.wangyue.domain.*;
 import com.wangyue.domain.util.Result;
 import com.wangyue.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 public class ApplyController {
@@ -44,8 +45,8 @@ public class ApplyController {
      * 申请看房
      *
      * @param httpSession
-     * @param model
-     * @param id
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/applycheckuserlist")
@@ -83,7 +84,7 @@ public class ApplyController {
      * 拒绝租赁
      *
      * @param httpSession
-     * @param houseid
+     * @param
      * @return
      */
     @RequestMapping("/Noapply")

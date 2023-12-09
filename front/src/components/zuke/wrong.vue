@@ -34,8 +34,10 @@
 <script setup>
 import { reactive, ref, onMounted } from "vue";
 import { get, post } from "@/api/request";
+import {Refresh} from "@element-plus/icons-vue";
 
 // 刷新
+
 const shuaxin = () => {
   getData();
 };

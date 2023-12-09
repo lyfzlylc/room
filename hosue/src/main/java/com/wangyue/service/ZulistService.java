@@ -1,7 +1,6 @@
 package com.wangyue.service;
 
 import com.wangyue.domain.Zulist;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

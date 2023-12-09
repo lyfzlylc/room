@@ -35,8 +35,8 @@ public class CheckoutController {
     /**
      * 批量删除
      *
-     * @param cur
-     * @param size
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/deleteCheck")

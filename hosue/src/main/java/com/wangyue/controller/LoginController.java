@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.Map;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/user")
@@ -70,9 +71,9 @@ public class LoginController {
     /**
      * 注册
      *
-     * @param username
-     * @param password
-     * @param confirmPassword
+     * @param
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/register")

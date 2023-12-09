@@ -124,15 +124,15 @@ public class UserlistController {
         userlistService.delUser(id);
         return new Result(200, "账号删除成功");
     }
-//    @RequestMapping("/editUserInfo")
-//    public Result editUser(@RequestBody Map<String, String> map) {
-//        System.out.println(map.get("name"));
-//        System.out.println(map.get("pass"));
-//        System.out.println(map.get("phone"));
-//        System.out.println(map.get("idcard"));
-//        System.out.println(map.get("nickname"));
-//        Userlist userlist = userlistService.findByName(map.get("name"));
-//        System.out.println(userlist);
-//        return new Result(200, "账号删除成功");
-//    }
+    @RequestMapping("/editUserInfo")
+    public Result editUser(@RequestBody Map<String, String> map) {
+        System.out.println(map.get("name"));
+        System.out.println(map.get("pass"));
+        System.out.println(map.get("phone"));
+        System.out.println(map.get("idcard"));
+        System.out.println(map.get("nickname"));
+        Userlist userlist = userlistService.findByName(map.get("name"));
+        System.out.println(userlist);
+        return new Result(200, "账号删除成功");
+    }
 }

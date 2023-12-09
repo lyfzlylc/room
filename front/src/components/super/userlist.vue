@@ -95,7 +95,7 @@ import { get, post } from "@/api/request";
 import { ElMessage } from "element-plus";
 
 // 弹出框
-const addUser = ref(false);
+let addUser = ref(false);
 const editUser = ref(false);
 const formLabelWidth = "140px";
 const form = reactive({
@@ -125,6 +125,7 @@ const add = () => {
     get("/api/addUser", { name: form.name, pass: form.pass }).then((resp) => {
       if (resp.code == 200) {
         addUser = false;
+
         ElMessage.success(resp.message);
       }
     });

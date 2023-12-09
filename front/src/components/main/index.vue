@@ -55,6 +55,7 @@ const imgData = [
   { url: require("@/assets/img/lub/036.jpg") },
   { url: require("@/assets/img/lub/037.jpg") },
 ];
+
 </script>
 
 <style scoped>

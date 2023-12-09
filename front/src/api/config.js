@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 const router = useRouter()
 
 const Service = axios.create({
-    // baseURL: 'http://192.168.245.152:8080/',
+    // baseURL: 'http://192.168.1.10:8080/',
     baseURL: 'http://localhost:8080/',
     timeout: 10000
 })

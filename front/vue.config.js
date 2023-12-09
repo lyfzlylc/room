@@ -18,20 +18,17 @@ module.exports = defineConfig({
   },
   //跨域
   devServer: {
-
-    // 启动后自动打开浏览器
-    // open: true,
-    // 端口 设置
-    // port: '7070',
+     open: true,
+     port: '8080',
     proxy: {
       '/api': {
-        target: 'http://localhost:8088',
-        // target: 'http://192.168.245.152:8088',
+        target: 'http://localhost:8080',
+        // target: 'http://192.168.1.10:8080',
         pathRewrite: { '^/api': '' }
       }
     },
-    // 跳过host检查
-    // historyApiFallback: true,
-    // allowedHosts: "all"
+
+    historyApiFallback: true,
+    allowedHosts: "all"
   }
 })

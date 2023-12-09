@@ -6,14 +6,12 @@ import com.wangyue.domain.*;
 import com.wangyue.domain.util.Result;
 import com.wangyue.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -51,8 +49,8 @@ public class PaidController {
     /**
      * 租客待缴租金
      *
-     * @param cur
-     * @param size
+     * @param
+     * @param
      * @return
      */
     @RequestMapping("/topaidlist")

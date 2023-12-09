@@ -111,6 +111,7 @@ import { ElMessage } from "element-plus";
 import { useRouter } from "vue-router";
 import { adminInfo, userInfo } from "@/store/info";
 import { post } from "@/api/request";
+import {User} from "@element-plus/icons-vue";
 const adminInfo1 = adminInfo();
 const userInfo1 = userInfo();
 const super1 = () => {
@@ -161,7 +162,7 @@ const login = () => {
             window.sessionStorage.setItem("token", resp.uuid);
             // window.sessionStorage.setItem("roles", resp.data.type);
             // 判断登录权限
-            if (resp.data.type == "用户") {
+            if (resp.data.type === "用户") {
               userInfo1.changeInfo(resp.data);
               router.push("/u");
             } else {
@@ -183,7 +184,7 @@ const login = () => {
 };
 // 注册
 const register = () => {
-  if (registerForm.password == registerForm.confirmPassword) {
+  if (registerForm.password === registerForm.confirmPassword) {
     registerFormRef.value.validate((valid) => {
       if (valid) {
         console.log(registerForm);

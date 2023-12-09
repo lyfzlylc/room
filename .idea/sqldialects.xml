@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/数据库/zu.sql" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Documents/Navicat/MySQL/Servers/zu/id_cache.db" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Documents/Navicat/MySQL/Servers/zu/id_cache.db-shm" dialect="MySQL" />
+    <file url="file://$USER_HOME$/Documents/Navicat/MySQL/Servers/zu/id_cache.db-wal" dialect="MySQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>
